@@ -10,7 +10,7 @@ namespace MatriculasMVC.Data
             
         }
 
-        public DbSet<Estudiantes> Estudiantes { get; set; }
+        public DbSet<Estudiantes> Estudiante { get; set; }
 
         public DbSet<Cursos> Cursos { get; set; }
 

@@ -18,6 +18,6 @@ namespace MatriculasMVC.Models
         [Required]
         public DateTime FechaNacimiento { get; set; }
 
-        public List<Asistencia> Asistencias { get; set; }
+        public  List<Asistencia>? Asistencias { get; set; }
     }
 }
