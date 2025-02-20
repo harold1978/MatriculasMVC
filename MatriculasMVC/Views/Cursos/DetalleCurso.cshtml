@@ -1,0 +1,30 @@
+﻿@model MatriculasMVC.Models.Cursos
+
+@{
+    ViewData["Title"] = "DetalleCurso";
+}
+
+<h1>DetalleCurso</h1>
+
+<div>
+    <h4>Cursos</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditarCurso" asp-route-id="@Model?.Id">Editar Curso</a> |
+    <a asp-action="GetCursos">Listado General</a>
+</div>

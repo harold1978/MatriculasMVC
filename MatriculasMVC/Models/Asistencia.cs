@@ -15,13 +15,13 @@ namespace MatriculasMVC.Models
         [MaxLength(25)]
         public string estado { get; set; }
 
-        public int EstudianteId { get; set; }
+        public int? EstudianteId { get; set; }
 
-        public Estudiantes Estudiante { get; set; }
+        public Estudiantes? Estudiante { get; set; }
 
-        public int CursosId { get; set; }
+        public int? CursosId { get; set; }
 
-        public Cursos curso { get; set; }
+        public Cursos? curso { get; set; }
 
     }
 }

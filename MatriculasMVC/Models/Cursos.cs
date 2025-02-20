@@ -15,7 +15,7 @@ namespace MatriculasMVC.Models
         [MaxLength(100)]
         public string Descripcion { get; set; }
 
-        public List<Asistencia> asistencias { get; set; }
+        public List<Asistencia>? asistencias { get; set; }
 
 
     }

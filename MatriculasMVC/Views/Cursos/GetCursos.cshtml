@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MatriculasMVC.Models.Cursos>
+
+@{
+    ViewData["Title"] = "GetCursos";
+}
+
+<h1>LISTA DE CURSOS</h1>
+
+<p>
+    <a asp-action="CrearCurso">Crear Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                    <a asp-action="EditarCurso" asp-route-id="@item.Id">Editar Curso</a> |
+                    <a asp-action="DetalleCurso" asp-route-id="@item.Id">Detalle curso</a> |
+                    <a asp-action="EliminarCurso" asp-route-id="@item.Id">ELIMINAR</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
